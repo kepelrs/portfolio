@@ -12,5 +12,4 @@ window.setInterval(function() {
     mainImage.css("background-image", targetSlide)
     counter += 1;
     counter = counter % featuredSlides.length;
-    console.log(targetSlide)
 }, 5000);
