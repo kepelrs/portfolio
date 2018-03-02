@@ -16,6 +16,7 @@ h4 {
 hr.styled {
     height: 2px;
     background-color: rgb(128, 150, 171);
+    display: inline-block;
 }
 /* end of general page stylings */
 
@@ -38,8 +39,9 @@ hr.styled {
     display: block;
 }
 .header-text * {
-    float: right;
+    display: table;
     margin: 0;
+    margin-left: auto;
     padding: 0;
 }
 /* end of header styling */
@@ -63,19 +65,47 @@ hr.styled {
 
 /* text information styling */
 .main-text {
+    display: flex;
+    flex-flow: column;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
     border-radius: 15px;
     background-color: rgba(47, 59, 67, 1);
-    margin: 2em 0;
+    margin: 0;
+    margin-top: 1.5em;
+    padding: 0;
     transition: 2s;
 }
-.main-text p {
+.main-text * {
     color: white;
     font-size: 1em;
     font-family: Open Sans,sans-serif;
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
-    padding: 0.5em 0.25em 0.5em 0.5em
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main-text h3 {
+    font-size: xx-large;
+    padding-top: 0.5em;
+}
+.text-title {
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.text-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: wrap;
+    align-items: center;
+}
+.text-content {
+    padding: 1em;
+}
+.text-content p {
+    padding-bottom: 0.5em;
 }
 /* end of text information styling */
 
@@ -181,6 +211,9 @@ hr.styled {
         width: 35%;
         margin: 0.5em 0;
     }
+    .main-text h3 {
+        padding-top: 1em;
+    }
 }
 @media screen and (max-width: 585px) {
     h1 {
@@ -201,7 +234,7 @@ hr.styled {
         margin-right: 0 !important;
     }
     .featured-work figure img {
-    height: 60vw;
+        height: 60vw;
     }
 }
 @media screen and (max-width: 451px) {
