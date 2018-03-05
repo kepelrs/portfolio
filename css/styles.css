@@ -24,7 +24,6 @@ hr.styled {
 /* header stylings */
 .header-box {
     display: inline-block;
-    background-color: white; /* REMOVE */
     width: 100%;
 }
 .header-box hr {
@@ -110,9 +109,6 @@ hr.styled {
 /* end of text information styling */
 
 /* featured work styling */
-.featured-section {
-    background-color: white;  /* REMOVE */
-}
 .featured-section h2{
     color: rgb(132, 154, 168);
     text-transform: uppercase;
@@ -125,7 +121,6 @@ hr.styled {
 .featured-work {
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
     width: 32%;
-    background-color: white; /* REMOVE */
     float: left;
     padding-bottom: 0.25em;
     transition: 0.4s;
@@ -212,7 +207,7 @@ hr.styled {
         margin: 0.5em 0;
     }
     .main-text h3 {
-        padding-top: 1em;
+        padding-top: 2em;
     }
 }
 @media screen and (max-width: 585px) {
