@@ -40,4 +40,4 @@ if __name__ == "__main__":
     handler = logging.FileHandler(logfile)
     logger.addHandler(handler)
     app.logger.addHandler(handler)
-    app.run(host="0.0.0.0", port=2020, threaded=True, debug=False)
+    app.run(host="0.0.0.0", port=3120, threaded=True, debug=False)
