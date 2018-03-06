@@ -1,0 +1,10 @@
+*
+!.gitignore
+!index.html
+!styles.css
+!slides.js
+!logo.png
+!run.py
+!/img
+!/js
+!/css
