@@ -27,10 +27,9 @@ hr.styled {
 main {
     margin: 1em 0;
 }
-/* end of general page stylings */
 
 
-/* header stylings */
+/* header */
 .header-box {
     display: inline-block;
     width: 100%;
@@ -52,14 +51,12 @@ main {
 
 .header-text * {
     display: table;
-    margin: 0;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     padding: 0;
 }
-/* end of header styling */
 
 
-/* main image styling */
+/* main image */
 .main-image {
     image-rendering: -webkit-optimize-contrast;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
@@ -73,17 +70,16 @@ main {
     margin: 0.5em 0;
     transition: 2s;
 }
-/* end of main image styling */
 
-/* text information styling */
+
+/* text information */
 .main-text {
     display: flex;
     flex-flow: column;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
     border-radius: 15px;
     background-color: rgba(47, 59, 67, 1);
-    margin: 0;
-    margin-top: 1.5em;
+    margin: 1.5em 0 0 0;
     padding: 0;
     transition: 2s;
 }
@@ -91,7 +87,7 @@ main {
 .main-text * {
     color: white;
     font-size: 1em;
-    font-family: 'Open Sans, sans-serif';
+    font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-weight: 500;
     text-align: center;
@@ -125,9 +121,9 @@ main {
 .text-content p {
     padding-bottom: 0.5em;
 }
-/* end of text information styling */
 
-/* featured work styling */
+
+/* featured work */
 .featured-section h2 {
     color: rgb(132, 154, 168);
     text-transform: uppercase;
@@ -180,9 +176,9 @@ main {
 .featured-work a {
     text-decoration: none;
 }
-/* end of featured work styling */
 
-/* page footer styling */
+
+/* footer */
 .bottom {
     border-style: solid none none none;
     border-color: rgba(0,0,0,0.5);
@@ -196,7 +192,6 @@ main {
 .bottom p {
     margin: 0.5em 0;
 }
-/* end of footer styling */
 
 
 /* media queries */
@@ -208,7 +203,6 @@ main {
 }
 
 @media screen and (max-width: 900px) {
-
     .featured-work-container {
         display: flex;
         flex-wrap: wrap;
@@ -235,7 +229,6 @@ main {
 }
 
 @media screen and (min-width: 830px) {
-
     .main-image {
         width: 70% !important;
     }
@@ -246,7 +239,6 @@ main {
 }
 
 @media screen and (min-width: 675px) {
-
     main {
         display: flex;
         flex-wrap: wrap;
@@ -273,7 +265,6 @@ main {
 }
 
 @media screen and (max-width: 585px) {
-
     h1 {
         font-size: 35px;
     }
@@ -302,7 +293,6 @@ main {
 }
 
 @media screen and (max-width: 451px) {
-
     h1 {
         font-size: 25px;
     }
@@ -313,12 +303,10 @@ main {
     }
 
     .logo-img {
-        padding: 0;
-        padding-bottom: 0.5em;
+        padding: 0 0 0.5em 0;
     }
 
     .main-image {
         min-height: 300px;
     }
 }
-/* end of media queries */
