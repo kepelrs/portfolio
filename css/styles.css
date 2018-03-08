@@ -1,24 +1,31 @@
 /* general page stylings */
 body {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     color: rgb(47, 59, 67);
 }
+
 h1 {
     text-shadow: 0.5px 0.5px 0.5px black;
     letter-spacing: 5px;
     font-size: 50px;
     font-weight: 100;
 }
+
 h4 {
-text-shadow: 0.1px 0.1px 0.1px black;
+    text-shadow: 0.1px 0.1px 0.1px black;
     font-weight: 900;
 }
+
 hr.styled {
     height: 2px;
     background-color: rgb(128, 150, 171);
     display: inline-block;
+}
+
+main {
+    margin: 1em 0;
 }
 /* end of general page stylings */
 
@@ -28,17 +35,21 @@ hr.styled {
     display: inline-block;
     width: 100%;
 }
+
 .header-box hr {
     width: inherit;
 }
+
 .logo-img {
     float: left;
     padding: 0 1em 1em 1em;
 }
+
 .header-text {
     float: right;
     display: block;
 }
+
 .header-text * {
     display: table;
     margin: 0;
@@ -76,53 +87,62 @@ hr.styled {
     padding: 0;
     transition: 2s;
 }
+
 .main-text * {
     color: white;
     font-size: 1em;
     font-family: 'Open Sans, sans-serif';
     -webkit-font-smoothing: antialiased;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 .main-text h3 {
     font-size: xx-large;
     padding-top: 0.5em;
 }
+
 .text-title {
     height: 10%;
     display: flex;
     align-items: center;
 }
+
 .text-container {
     display: flex;
     flex: 1 1 auto;
     flex-flow: wrap;
     align-items: center;
 }
+
 .text-content {
     padding: 1em;
 }
+
 .text-content p {
     padding-bottom: 0.5em;
 }
 /* end of text information styling */
 
 /* featured work styling */
-.featured-section h2{
+.featured-section h2 {
     color: rgb(132, 154, 168);
     text-transform: uppercase;
 }
+
 .featured-work-container {
     width: 100%;
     display: inline-block;
     transition: 0.4s;
 }
+
 .featured-work-container a {
     color: unset;
 }
+
 .featured-work {
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
     width: 32%;
@@ -130,13 +150,16 @@ hr.styled {
     padding-bottom: 0.25em;
     transition: 0.4s;
 }
+
 .featured-work:hover {
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
     transition: 0.4s;
 }
+
 .featured-work:nth-child(2) {
     margin: 0 2%;
 }
+
 .featured-work figure,
 .featured-work figure * {
     color: inherit;
@@ -145,6 +168,7 @@ hr.styled {
     width: 100%;
     text-align: center;
 }
+
 .featured-work figure img {
     width: 100%;
     height: 17.5vw;
@@ -152,10 +176,28 @@ hr.styled {
     object-fit: cover;
     object-position: top;
 }
+
 .featured-work a {
     text-decoration: none;
 }
 /* end of featured work styling */
+
+/* page footer styling */
+.bottom {
+    border-style: solid none none none;
+    border-color: rgba(0,0,0,0.5);
+    border-width: 1px;
+    margin-top: 3em;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.bottom p {
+    margin: 0.5em 0;
+}
+/* end of footer styling */
+
 
 /* media queries */
 @media screen and (min-width: 950px) {
@@ -164,91 +206,117 @@ hr.styled {
         margin: auto;
     }
 }
+
 @media screen and (max-width: 900px) {
+
     .featured-work-container {
         display: flex;
         flex-wrap: wrap;
     }
+
     .featured-work {
         display: flex;
         order: 3;
         width: 47.5%;
         margin: 0 0 1.5em 0 !important;
     }
+
     .featured-work:nth-child(1) {
         margin-right: 5% !important;
     }
+
     .featured-work:nth-child(3) {
         margin: 0 auto !important;
     }
+
     .featured-work figure img {
-    height: 30vw;
+        height: 30vw;
     }
 }
+
 @media screen and (min-width: 830px) {
+
     .main-image {
         width: 70% !important;
     }
+
     .main-text {
         width: 25% !important;
     }
 }
+
 @media screen and (min-width: 675px) {
+
     main {
         display: flex;
         flex-wrap: wrap;
     }
+
     main section{
         width: 100%;
-
     }
+
     .main-image {
         width: 60%;
         margin-right: 5%;
         height: unset;
     }
+
     .main-text {
         width: 35%;
         margin: 0.5em 0;
     }
+
     .main-text h3 {
         padding-top: 2em;
     }
 }
+
 @media screen and (max-width: 585px) {
+
     h1 {
-    font-size: 35px;
+        font-size: 35px;
     }
+
     h4 {
-    font-size: 18px;
-    font-weight: 700;
+        font-size: 18px;
+        font-weight: 700;
     }
+
     .logo-img {
         width: 3em;
         padding: 0 0.5em 0.5em 0.5em;
     }
+
     .featured-work {
         width: 100%;
     }
+
     .featured-work:nth-child(1) {
         margin-right: 0 !important;
     }
+
     .featured-work figure img {
         height: 60vw;
     }
 }
+
 @media screen and (max-width: 451px) {
+
     h1 {
         font-size: 25px;
     }
+
     h4 {
         font-size: 14px;
         font-weight: 700;
     }
+
     .logo-img {
         padding: 0;
         padding-bottom: 0.5em;
     }
+
     .main-image {
         min-height: 300px;
     }
