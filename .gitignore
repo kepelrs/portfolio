@@ -6,5 +6,6 @@
 !logo.png
 !run.py
 !/img
+!/img/*
 !/js
 !/css
