@@ -16,9 +16,7 @@ routing = {"movie": "130.204.58.113:3127",
 # You can delete this block once the project is finished.
 @app.after_request
 def after_request(response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    response.headers["Expires"] = 0
-    response.headers["Pragma"] = "no-cache"
+    response.headers['Cache-Control'] = 'max-age=300'
     return response
 
 
