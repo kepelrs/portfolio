@@ -254,7 +254,7 @@ main {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
     h1 {
         font-size: 35px;
     }
@@ -267,6 +267,10 @@ main {
     .logo-img {
         width: 3em;
         padding: 0 0.5em 0.5em 0.5em;
+    }
+
+    .main-image {
+        background-size: 100% 100%;
     }
 
     .featured-work {
@@ -297,7 +301,6 @@ main {
     }
 
     .main-image {
-        background-size: 100% 100%;
         min-height: 300px;
     }
 }
