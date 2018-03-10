@@ -8,7 +8,8 @@ app.config['SERVER_NAME'] = "arockhub.com"
 
 # routing dictionary
 routing = {"movie": "130.204.58.113:3127",
-           "finance": "130.204.58.113:3126"}
+           "finance": "130.204.58.113:3126",
+           "www": "arockhub.com"}
 
 
 # Ensure responses aren't cached on your browser.
