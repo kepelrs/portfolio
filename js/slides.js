@@ -8,7 +8,7 @@ for(let i of projectImgs) {
 }
 
 window.setInterval(function() {
+    counter = (counter + 1) % featuredSlides.length;
     let targetSlide = "url(" + featuredSlides[counter] + ")";
     mainImage.css("background-image", targetSlide)
-    counter = (counter + 1) % featuredSlides.length;
 }, 5000);
