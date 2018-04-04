@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 import logging
+import requests
 from datetime import datetime as dt
 
 # setup Flask app
@@ -9,11 +10,11 @@ app.config['SERVER_NAME'] = "arockhub.com"
 # routing dictionary
 routing = {"movie": "130.204.58.113:3127",
            "finance": "130.204.58.113:3126",
-           "www": "arockhub.com"}
+           "www": "130.204.58.113:3120"}  #  <- main ip
 
 
 # Ensure responses aren't cached on your browser.
-# Useful to see the changes you have made to your front end.
+# Useful while still making changes to your front end.
 # You can delete this block once the project is finished.
 @app.after_request
 def after_request(response):
@@ -26,10 +27,33 @@ def after_request(response):
 def home():
     return render_template("index.html")
 
+@app.route('/', defaults={'path': ''}, subdomain='<target>', methods = ['POST', 'GET'])
+@app.route('/<path:path>', subdomain='<target>', methods = ['POST', 'GET'])
+def target_subdomain(target, path):
+    return _proxy(target, path)
 
-@app.route('/', subdomain='<target>')
-def target_subdomain(target):
-    return redirect("http://" + routing[target])
+
+#  from: https://stackoverflow.com/questions/6656363/
+#        proxying-to-another-web-service-with-flask?utm_medium=organic&
+#        utm_source=google_rich_qa&utm_campaign=google_rich_qa
+def _proxy(*args, **kwargs):
+    old_domain = args[0] + '.' + app.config['SERVER_NAME']
+    new_domain = routing[args[0]]
+
+    resp = requests.request(
+        method=request.method,
+        url=request.url.replace(old_domain, new_domain),
+        headers={key: value for (key, value) in request.headers if key != 'Host'},
+        data=request.get_data(),
+        cookies=request.cookies,
+        allow_redirects=False)
+
+    excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
+    headers = [(name, value) for (name, value) in resp.raw.headers.items()
+               if name.lower() not in excluded_headers]
+
+    response = Response(resp.content, resp.status_code, headers)
+    return response
 
 
 # Run the program
