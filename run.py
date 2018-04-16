@@ -9,7 +9,9 @@ app.config['SERVER_NAME'] = "arockhub.com"
 
 # routing dictionary
 routing = {"movie": "130.204.58.113:3127",
-           "finance": "130.204.58.113:3126",
+           "finance": "localhost:3126",
+           "memory": "localhost:3122",
+           "paint": "localhost:3121",
            "www": "130.204.58.113:3120"}  #  <- main ip
 
 
