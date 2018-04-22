@@ -12,7 +12,7 @@ routing = {"movie": "130.204.58.113:3127",
            "finance": "localhost:3126",
            "memory": "localhost:3122",
            "paint": "localhost:3121",
-           "www": "130.204.58.113:3120"}  #  <- main ip
+           "www": "arockhub.com"}  #  <- main ip
 
 
 # Ensure responses aren't cached on your browser.
